@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "936294531882",
+    "project_id": "realtimemessagin",
+    "storage_bucket": "realtimemessagin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936294531882:android:bd1f2cf03f54e06b205453",
+        "android_client_info": {
+          "package_name": "com.opus_bd.realtimemessagin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936294531882-d8a0p48aqilunk7imijukurl6r4h9t6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKPVRjLhqEqgstnfeC1Cj4hka4z69fDEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936294531882-d8a0p48aqilunk7imijukurl6r4h9t6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
