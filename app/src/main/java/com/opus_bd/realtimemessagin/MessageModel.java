@@ -7,8 +7,17 @@ public class MessageModel {
     public String message;
     public Integer messageType;
     public String messageTime;
+    public boolean isImage;
     // Constructor
 
+
+    public boolean isImage() {
+        return isImage;
+    }
+
+    public void setImage(boolean image) {
+        isImage = image;
+    }
 
     public String getMessage() {
         return message;

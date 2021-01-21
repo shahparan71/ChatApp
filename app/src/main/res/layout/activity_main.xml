@@ -22,11 +22,20 @@
 
         <EditText
             android:id="@+id/etChat"
+            android:layout_toRightOf="@+id/imagePicker"
             android:layout_width="match_parent"
             android:layout_toLeftOf="@+id/btnSubmit"
             android:layout_height="match_parent">
 
         </EditText>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/imagePicker"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_height="match_parent">
+
+        </ImageView>
 
         <Button
             android:layout_width="wrap_content"

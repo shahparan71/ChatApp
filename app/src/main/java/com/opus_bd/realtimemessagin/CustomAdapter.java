@@ -1,12 +1,13 @@
 package com.opus_bd.realtimemessagin;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.text.DateFormat;
 import java.util.ArrayList;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -54,15 +55,27 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private class MessageInViewHolder extends RecyclerView.ViewHolder {
 
         TextView messageTV, dateTV;
+        ImageView iv_image;
 
         MessageInViewHolder(final View itemView) {
             super(itemView);
             messageTV = itemView.findViewById(R.id.message_text);
+            iv_image = itemView.findViewById(R.id.iv_image);
             dateTV = itemView.findViewById(R.id.date_text);
         }
 
         void bind(int position) {
+
             MessageModel messageModel = list.get(position);
+
+            if (messageModel.isImage) {
+                iv_image.setVisibility(View.VISIBLE);
+                messageTV.setVisibility(View.GONE);
+            } else {
+                iv_image.setVisibility(View.GONE);
+                messageTV.setVisibility(View.VISIBLE);
+            }
+
             messageTV.setText(messageModel.message);
             dateTV.setText("12:00");
         }
@@ -71,15 +84,28 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private class MessageOutViewHolder extends RecyclerView.ViewHolder {
 
         TextView messageTV, dateTV;
+        ImageView iv_image;
 
         MessageOutViewHolder(final View itemView) {
             super(itemView);
+            iv_image = itemView.findViewById(R.id.iv_image);
             messageTV = itemView.findViewById(R.id.message_text);
             dateTV = itemView.findViewById(R.id.date_text);
         }
 
         void bind(int position) {
             MessageModel messageModel = list.get(position);
+
+            Log.i("dfdf6d56fd56f", String.valueOf(messageModel.isImage));
+
+            if (messageModel.isImage) {
+                iv_image.setVisibility(View.VISIBLE);
+                messageTV.setVisibility(View.GONE);
+            } else {
+                iv_image.setVisibility(View.GONE);
+                messageTV.setVisibility(View.VISIBLE);
+            }
+
             messageTV.setText(messageModel.message);
             dateTV.setText("12:00");
         }
