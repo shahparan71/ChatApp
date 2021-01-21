@@ -5,8 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import java.text.DateFormat;
 import java.util.ArrayList;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
@@ -51,23 +53,24 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     private class MessageInViewHolder extends RecyclerView.ViewHolder {
 
-        TextView messageTV,dateTV;
+        TextView messageTV, dateTV;
 
         MessageInViewHolder(final View itemView) {
             super(itemView);
             messageTV = itemView.findViewById(R.id.message_text);
             dateTV = itemView.findViewById(R.id.date_text);
         }
+
         void bind(int position) {
             MessageModel messageModel = list.get(position);
             messageTV.setText(messageModel.message);
-            dateTV.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(messageModel.messageTime));
+            dateTV.setText("12:00");
         }
     }
 
     private class MessageOutViewHolder extends RecyclerView.ViewHolder {
 
-        TextView messageTV,dateTV;
+        TextView messageTV, dateTV;
 
         MessageOutViewHolder(final View itemView) {
             super(itemView);
@@ -78,7 +81,7 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         void bind(int position) {
             MessageModel messageModel = list.get(position);
             messageTV.setText(messageModel.message);
-            dateTV.setText(DateFormat.getTimeInstance(DateFormat.SHORT).format(messageModel.messageTime));
+            dateTV.setText("12:00");
         }
     }
 

@@ -7,10 +7,46 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
+        android:layout_above="@+id/relativeLayoutBottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:listitem="@layout/item_text_in">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp">
+
+        <EditText
+            android:id="@+id/etChat"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@+id/btnSubmit"
+            android:layout_height="match_parent">
+
+        </EditText>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btnSubmit"
+            android:text="Send"
+            android:layout_alignParentRight="true"
+
+            android:layout_height="wrap_content">
+
+        </Button>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:id="@+id/progress_circular"
+            android:text="Send"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content">
+
+        </ProgressBar>
+
+    </RelativeLayout>
 
 </RelativeLayout>
